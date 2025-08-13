@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스트립트 입문 01</title>
+</head>
+<body>
+    <h1 id="heading">자바스트립트</h1>
+    <p id="text">위 텍스트를 클릭해 보세요</p>
+    <script>
+        let heading = document.querySelector('#heading');
+        heading.onclick = function(){
+            heading.style.color = "red";
+
+            let reply = confirm("정말 진행하시겠습니까?")
+
+            //let name = prompt("이름을 입력하세요")
+            let name = prompt("이름을 입력하세요","홍길동")
+        }
+    </script>
+</body>
+</html>
