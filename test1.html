@@ -4,50 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자바스크립트 해석</title>
-    <style>
-        table{border: 1px solid #000;border-collapse: : collapse;}
-        th,td{border: 1px solid #000;padding: 5px;text-align: center;}
-    </style>
     <script src="test01.js"></script>
-    
+    <link rel="stylesheet" href="test1.css">
 </head>
 <body>
     <h1>출석부<div id="clock"></div></h1>
-    <table>
-        <colgroup>
-            <col style="width: 100px;">
-            <col style="">
-        </colgroup>
-        <tr>
-            <td>No</td>
-            <td id="name">이름</td>
-        </tr>
         <script>
-            /*
-            let bunho01 = 1; // 값을 숫자로 할당, 변수의 자료형 - 숫자
-            console.log("bunho01 ===============");
-            console.log(typeof bunho01);
+        document.write("<table>")
+        document.write("<colgroup><col style='width:100px'><col style=''></colgroup>")    
+        document.write("<tr><td>No</td><td>이름</td></tr>")
 
-            let bunho02 = "1"; // 값을 문자로 할당, 변수의 자료형 - 문자
-            console.log("bunho02 ===============");
-            console.log(typeof bunho02);
-*/
-            let myname = prompt();
+        let tableRows = "";
+
             for (let hakbun = 1; hakbun <= 14; hakbun++) { 
-                document.write("<tr><td>" + hakbun + "</td><td id= 'mynamepo" + hakbun + "'></td></tr>");
+                let myname = prompt('');
+                let tableRows=`
+                    <tr>
+                        <td>${hakbun}</td>
+                        <td id='mynamepo${hakbun}'></td>
+                    </tr>
+                `;
             }
+
+            document.write("<tbody id='list'></tbody>")
+
             document.getElementById("mynamepo2").innerHTML = myname;
+
+            document.write("</table>")
         </script>
-    </table>
-    <script>
+    
 
-        function showTime(){
-            let now = new Date();
-            let display = now.toLocaleTimeString();
-        document.getElementById("clock").innerHTML = "현재 시각은 " + display;
-        }
-
-        setInterval(showTime, 1000);
-    </script>
 </body>
 </html>
