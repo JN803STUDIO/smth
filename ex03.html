@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>범위(Scope)</title>
+</head>
+<body>          
+
+    <script>
+        let a=10; //number형형 값을 할당당
+        let b=3;
+
+        console.log("덧셈 a+b :", a+b);
+        console.log("뺄셈 a-b :", a-b);
+        console.log("곱셈 a*b :", a*b);
+        console.log("나눗셈 a/b :", a/b);
+        console.log("나머지 a%b :", a%b);
+
+        let numTest01 = Number('123'); //123 문자 매개변수
+        console.log("Number()호출 : ",numTest01);//
+        let numTest02 = Number(123); //123
+        console.log("Number()호출 : ",numTest02);//숫자->숫자
+
+        let numTest03 = Number('123ABC'); //123ABC 문자 매개변수
+        console.log("Number()호출 : ",numTest03);// Not a Number
+
+
+        let parTest01 = parseInt('123'); //123ABC 문자 매개변수
+        console.log("parseInt()호출 : ",parTest01);// 123
+        let parTest02 = parseInt('123.45'); //123ABC 문자 매개변수
+        console.log("parseInt()호출 : ",parTest02);// 123
+        let parTest03 = parseInt('123ABC'); //123ABC 문자 매개변수
+        console.log("parseInt()호출 : ",parTest03);// 123
+
+
+         let parFloTest01 = parseFloat('123'); //123ABC 문자 매개변수
+        console.log("parseFloat()호출 : ",parFloTest01);// 123
+        let parFloTest02 = parseFloat('123.45'); //123ABC 문자 매개변수
+        console.log("parseFloat()호출 : ",parFloTest02);// 123
+        let parFloTest03 = parseFloat('123ABC'); //123ABC 문자 매개변수
+        console.log("parseFloat()호출 : ",parFloTest03);// 123
+
+
+        let StrTest01 = String(123); //숫자나 논리형 값을 문자열로 변환한다
+        console.log("String()호출 : ",StrTest01);// 123
+        let StrTest02 = String(true); //123ABC 문자 매개변수
+        console.log("String()호출 : ",StrTest02);// true
+
+
+        let BoolTest01 = Boolean(1); //괄호 안의 값을 논리형으로 변환한다
+        console.log("Boolean()호출 : ",BoolTest01);// true
+        let BoolTest02 = Boolean(0); //123ABC 문자 매개변수
+        console.log("Boolean()호출 : ",BoolTest02);// false
+        let BoolTest03 = Boolean('ABC'); //123ABC 문자 매개변수
+        console.log("Boolean()호출 : ",BoolTest03);// true
+        let BoolTest04 = Boolean(''); //123ABC 문자 매개변수
+        console.log("Boolean()호출 : ",BoolTest04);// false
+    </script>
+
+</body>
+</html>
