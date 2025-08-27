@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문(while, do-wile)</title>
+</head>
+<body>
+    <script>
+        function starswf(){
+            let strarsw = parseInt(prompt('별을 몇 개 표시할까요?'))
+
+            while(strarsw>0){ 
+                document.write('*');
+                document.write('<br>');
+                strarsw--;
+                //document.write(strarsw);
+            }
+            document.write('<br>');
+        }
+
+        function starsdf(){
+            let starsd = parseInt(prompt('별을 몇 개 표시할까요?'))
+
+            do{
+                document.write('*');
+                starsd--;
+            }while(starsd>0);
+
+            document.write('<br>');
+        }
+
+    starswf();
+    starsdf();
+    </script>
+</body>
+</html>
