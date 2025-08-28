@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch 조건문</title>
+    <style>
+        h1, p{text-align: center;}
+    </style>
+</head>
+<body>
+    
+    <script>
+        document.write(`<h1>4의 배수일까 아닐까?</h1>`)
+        
+
+        let userNumber = prompt('숫자를 입력하세요.');
+        
+        if(!isNaN(userNumber)){
+            if(parseInt(userNumber) % 4 === 0){ // 입력받은 값을 3으로 나눈후 나머지값이 0의 값과 자료형 까지 같다면
+                document.write(`<p>${userNumber}는 4의 배수입니다.</p>`)
+            }
+            else{
+                document.write(`<p>${userNumber}는 4의 배수가 아닙니다.</p>`)
+            }
+
+        }
+        else{
+
+            alert('숫자가 아닙니다.')
+        }
+    </script>
+
+</body>
+</html>

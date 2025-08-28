@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문연습</title>
+</head>
+<body>
+    
+    <script>
+        let userNumber = prompt('숫자를 입력하세요.');
+
+        if(!isNaN(userNumber)){
+            if(parseInt(userNumber) % 3 === 0){ // 입력받은 값을 3으로 나눈후 나머지값이 0의 값과 자료형 까지 같다면
+                alert('3의 배수입니다.')
+            }
+            else{
+                alert('3의 배수가 아닙니다.')
+            }
+
+        }
+        else{
+
+            alert('숫자가 아닙니다.')
+        }
+    </script>
+
+</body>
+</html>

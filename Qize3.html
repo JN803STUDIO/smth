@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz-3</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+        h2 {
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    [문제]
+    1. 사용자가 숫자를 입력하면, 1부터 입력받은 숫자, prompt()로 받은 숫자 변수
+
+    2. 입력한 숫자를 화면에 모두 출력, document.write()
+
+    3. 3배수 숫자는 총 몇 개인가요? 3배수 일때마다 값을 증가(++) 변수
+
+    4. 반복문(1부터 입력받은 숫자까지)
+    - while(1) && (입력받은 숫자까지)
+    - for (초기값; <입력받은 숫자; ++)
+
+    5. 입력받은 숫자를 3으로 나누어 나머지가 0이냐 확인
+    - 조건문(if)
+    - true 면 : 3의 배수 숫자 판단하고, 3의 배수 카운트 증가(++)
+     -->
+    <script>
+        let count = 0
+        let input = prompt("몇까지 3의 배수를 찾을까요?");
+        document.write("<h1>3의 배수 찾기</h1>");
+
+        if (input === null) {
+
+        } else {
+            let number = parseInt(input);
+
+            if (isNaN(number)) {
+                document.write("<h2>유효한 숫자를 입력해주세요.</h2>");
+            } else {
+                document.write(`<div>`);
+                for (let i = 1; 3*i <= number; i++){
+                    let num1 = 3 * i;
+                    document.write(`${num1}, `);
+                    count++
+                };
+                document.write(`</div>`);
+                document.write(`<h2>${number}까지 3의 배수의 개수 : ${count}</h2>`);
+            }
+        }
+    </script>
+</body>
+</html>

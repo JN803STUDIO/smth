@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수의 사용정리</title>
+</head>
+<body>
+    <script>
+        /*
+        // 함수 기본형
+        function showJob() {
+            // function 으로 함수를 정의
+            // showJob() 매개변수 없는 함수 호출
+            // showJob(매개변수(Parameter)) 유
+
+            return x;  // 변수
+            return x+y; // 수식
+        }
+
+        showJob(); // 인수값이 없는 함수 호출
+        // showJob(인수(Argument)) 유
+        */
+
+        function addNumber1(num1, num2, num3) {  // 매개변수 2개를 인수로부터 받는다
+        return num1*num2+num3;            // 수식계산후 함수를 호출한곳으로 return
+        }
+
+        let result1 = addNumber1(1, 2, 3);
+        console.log(`result1 = ${result1}`);
+
+        // 매개변수에 기본값 지정
+        function addNumber2(num1, num2=5, num3=10) {// 매개변수 기본값 지정
+        return num1*num2+num3;
+        }
+
+        let result2  = addNumber2(1, 2, 3);
+        console.log(`result2 = ${result2}`);
+
+        let result3 = addNumber2(1);// 인수값을 모두 넘져주지 않으면 매개변수는 지정된 기본값을 사용용
+        console.log(`result3 = ${result3}`);
+
+        // 익명함수
+        let result4 = function(a,b){
+            return a+b;
+        }
+
+        console.log(`result4 = ${result4(10,20)}`);
+
+        // 즉시 실행 함수
+        /*
+        (function(){
+
+        }());
+        (function(매개변수){
+
+        }(인수));
+        */
+
+       
+        (function(){
+            let userName = prompt("이름을 입력하세요.");
+            document.write(`안념하세요. ${userName} 님!`);
+        }());
+
+        (function(a,b){
+            sum = a + b;
+        }(10,20));
+        
+        document.write(`인수의 합계는 ${sum}`);
+        
+        let hi = function(){
+            return "안녕하세요";
+        }
+
+        let hi2 = () => {return "안녕하세요"};
+        document.write(`${hi2}`);
+    </script>
+</body>
+</html>
