@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+    <style>
+      button {
+      width: 200px;
+      height: 50px;
+      
+      background-color: white;
+      font-size: 20px;
+      border-radius: 10px;
+      border-width: 1px;
+      border-color: #9e9e9e;
+      border-style: solid;
+    }
+    </style>
+</head>
+<body>
+    
+<div id="display">
+    <script>
+        document.write(`<p><b>location.href : </b>${location.href}</p>`);
+        document.write(`<p><b>location.host : </b>${location.host}</p>`);
+        document.write(`<p><b>location.protocol : </b>${location.protocol}</p>`);
+    </script>
+</div>
+
+<button onclick="location.replace('https://www.w3schools.com')">w3schools.com</button>
+<!-- replace method -->
+
+<button onclick="location.replace('https://www.naver.com')">네이버로 이동</button>
+<!-- replace method -->
+
+ <button onclick="location.href='location2.html'">location2로 이동</button>
+<!-- replace method -->
+</body>
+</html>

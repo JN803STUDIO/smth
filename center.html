@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>center</title>
+</head>
+<body>
+
+    <script>
+        /* 팝업창을 스크린창 가운데에 띄우기 */
+        
+        function openCenter(doc, win, width, height){
+            let left = (screen.availWidth - width) / 2; //팝업창 왼쪽 좌표
+            let top = (screen.availHeight - height) / 2; //팝업창 위쪽 좌표
+            let opt = `left=${left}, top=${top}, width=${width}, height=${height}`;
+            window.open(doc, win, opt);
+        }
+
+        openCenter('days.html', 'pop', 500, 400);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>독서 챌린지</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container{
+      width:300px;
+      height:300px;
+      border-radius:50%;
+      border:1px solid #222;
+      background-color:#3bf;
+      text-align: center;
+    }
+    h1 {
+      margin-top:70px;
+    }
+    .accent {
+      font-size:1.8em;
+      font-weight:bold;
+      color:red;
+    }
+    .close {
+      width: 100px;
+      height: 40px;
+      
+      background-color: transparent;
+      font-size: 20px;
+      border-radius: 10px;
+      border-width: 1px;
+      border-color: #9e9e9e;
+      border-style: solid;
+    }
+    .close:hover{
+      background-color: rgb(48, 169, 230);
+    }
+    .p{
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>책 읽기</h1>
+    <p><span class="accent" id="result"></span>일 연속으로 <br> 책 읽기를 달성했군요.</p>
+    <p class="p">축하합니다!</p>
+    <button class="close" onclick="window.close()">닫기</button>
+  </div>  
+
+  <script>
+    let now = new Date(); // now 객체에 오늘 날짜를 지정
+    let firstDay = new Date("2024-09-04"); // firstDay 객체에 시작 날짜를 지정
+
+    let toNow = now.getTime(); // toNow에 오늘날짜 밀리초를 저장
+    let toFirst = firstDay.getTime(); // toFirst에 오늘날짜까지 지난 밀리초를 저장
+    let passedTime = toNow - toFirst; // toNow - toFirst 함
+
+    passedTime = Math.round(passedTime/(1000*60*60*24)); // 밀리초를 일 수로 계산하고 반올림
+
+    document.querySelector('#result').innerText = passedTime; // result id 를 가진 HTML 태그에 올림
+  </script>
+</body>
+</html>
